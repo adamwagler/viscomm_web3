@@ -1,0 +1,187 @@
+/* Gloabal Styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Didact Gothic', sans-serif;
+}
+body {
+    background-image: url(../images/topography.png);
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2.5em;   
+}
+h2 {
+    font-size: 2em;   
+}
+h3 {
+    font-size: 1.75em;   
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5em;
+}
+p, ul, ol {
+    font-size: 1em;
+}
+.button a {   
+    border: #666 thin solid;
+    color: #666;
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.button a:hover {   
+    border: #000 thin solid;
+    color: #fff;
+    background-color: #000;
+}
+.button a span {   
+    margin-right: 10px;
+}
+
+
+
+
+/* Header and navigation styles */
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 90px;
+    padding: 0 5%;
+    background-color: #000;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+header h1 {  
+    order: 1;
+    flex-grow: 1;
+}
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+header nav {
+    order: 2;
+    flex-grow: 1;
+}
+header nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-end;
+    list-style-type: none;
+    padding: 0;
+}
+header nav li a {
+    align-items: flex-end;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 2em;
+}
+
+
+
+
+
+/* Main content styles */
+main {
+    width: 90%;
+    max-width: 1000px;
+    padding: 0 5%;
+    margin: 0 auto;
+    background-color: #fff;    
+}
+main nav {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    padding: 1.5em;
+}
+main nav a {
+    text-decoration: none;
+    color: #666;    
+}
+
+
+
+/* Home page content styles */
+.home article {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.home article a {
+    padding: 0 3% 3% 3%;
+}
+
+
+/* About page content styles */
+.about section {
+    display: flex;
+    flex-wrap: row nowrap;
+}
+.about article {
+    padding: 0 5% 2em 0;
+}
+.about article h2:first-child {
+    margin-top: 0;
+}
+
+
+
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1.5em;
+    margin: .5em 3.5em;
+    border-top: #666 solid thin;
+}
+footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+    justify-content: center; 
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+footer ul a {
+  text-decoration: none;
+  display: block;
+  padding: 0 .5em;
+  color: #333;
+}
+
+
+
+
+
+/* Media Queries for responsive website */
+@media (max-width: 600px){
+    header {
+        flex-direction: column;
+        height: auto;
+        padding-top: 1em;
+        background-position: top center; 
+    }
+    header h1 {  
+        margin: .75em 0 -.25em 0;
+    }
+    header nav li a{  
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .about section {
+        flex-direction: column;
+    }
+    footer {
+        padding: 1em 0;
+        margin: .5em .5em;
+    }
+}
